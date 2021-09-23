@@ -1,4 +1,4 @@
-import React, {useState, useRef, useEffect} from "react";
+import React, {useState, useEffect} from "react";
 import {v4 as uuid} from 'uuid';
 
 // Styles
@@ -19,8 +19,6 @@ const KEY = 'todoApp.todos'
 const App = () => {
   const [toDos, setToDos] = useState([])
 
-  const toDoTaskRef = useRef()
-
   useEffect(() => {
     const storedToDos = JSON.parse(localStorage.getItem(KEY))
     if(storedToDos) {
@@ -39,15 +37,12 @@ const App = () => {
     setToDos(newToDos)
   }
 
-  const handleAddToDo = () => {
-    const task = toDoTaskRef.current.value;
-    if(task === '') return;
+  const handleAddToDo = (value) => {
+    if(value === '') return;
 
     setToDos(prevToDo => {
-      return [...prevToDo, {id: uuid(), task: task, completed: false}]
+      return [...prevToDo, {id: uuid(), task: value, completed: false}]
     })
-
-    toDoTaskRef.current.value = null;
   }
 
   const handleClearCompleted = () => {
@@ -60,7 +55,7 @@ const App = () => {
     <GlobalStyle/>
     <Title />
     <TodoList toDos={toDos} toggleToDo={toggleToDo}/>
-    <AddTaskBar onClick={handleAddToDo}/>
+    <AddTaskBar onClick={handleAddToDo} />
     <ClearCompletedButton onClick={handleClearCompleted}>✖</ClearCompletedButton>
     <InfoSection tasks={toDos.filter(todo => !todo.completed).length}/>
     </>

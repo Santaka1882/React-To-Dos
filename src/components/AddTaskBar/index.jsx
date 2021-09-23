@@ -1,4 +1,4 @@
-import React, { useRef }  from "react";
+import React, { useRef } from "react";
 
 // Components
 import AddTaskButton from "../AddTaskButton";
@@ -7,13 +7,20 @@ import AddTaskButton from "../AddTaskButton";
 import { Wrapper, Content } from "./AddTaskBar.styles";
 
 const AddTaskBar = ( props ) => {
-  const toDoTaskRef = useRef()
+  const inputRef = useRef('')
+
+  const sendTask = () => {
+    const newTask = inputRef.current.value
+    props.onClick(newTask)
+
+    inputRef.current.value = null
+  }
 
   return (
     <Wrapper>
       <Content>
-        <input ref={toDoTaskRef} type='text' placeholder="New Task"/>
-        <AddTaskButton onClick={props.onClick} value={'Add'}/>
+        <input ref={inputRef} type='text' placeholder="New Task"/>
+        <AddTaskButton onClick={sendTask} value={'Add'}/>
       </Content>
     </Wrapper>
   )
