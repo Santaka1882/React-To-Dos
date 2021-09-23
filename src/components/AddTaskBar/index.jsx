@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 // Components
 import AddTaskButton from "../AddTaskButton";
@@ -15,6 +15,14 @@ const AddTaskBar = ( props ) => {
 
     inputRef.current.value = null
   }
+
+  useEffect(() => {
+    inputRef.current.addEventListener('keyup', ({key}) => {
+      if(key === "Enter") {
+        sendTask()
+      }
+    })
+  })
 
   return (
     <Wrapper>
