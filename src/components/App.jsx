@@ -37,6 +37,18 @@ const App = () => {
     setToDos(newToDos)
   }
 
+  const deleteTask = id => {
+    const newToDos = toDos.filter(item => item.id !== id)
+    setToDos(newToDos)
+  }
+
+  const editTask = (id, newContent) => {
+    const newToDos = [...toDos]
+    const todo = newToDos.find(todo => todo.id === id)
+    todo.task = newContent
+    setToDos(newToDos)
+  }
+
   const handleAddToDo = (value) => {
     if(value === '') return;
 
@@ -54,7 +66,7 @@ const App = () => {
     <>
     <GlobalStyle/>
     <Title />
-    <TodoList toDos={toDos} toggleToDo={toggleToDo}/>
+    <TodoList toDos={toDos} toggleToDo={toggleToDo} deleteTask={deleteTask} editTask={editTask}/>
     <AddTaskBar onClick={handleAddToDo} />
     <ClearCompletedButton onClick={handleClearCompleted}>✖</ClearCompletedButton>
     <InfoSection tasks={toDos.filter(todo => !todo.completed).length}/>

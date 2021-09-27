@@ -4,14 +4,14 @@ import TodoItem from "../TodoItem";
 // Styles
 import { Wrapper, Content } from "./TodoList.styles";
 
-const TodoList = ({ toDos, toggleToDo }) => (
+const TodoList = ({ toDos, toggleToDo, deleteTask, editTask }) => (
   <Wrapper>
     <Content>
     <h3>List:</h3>
     <ul>
     {
       toDos.map(toDo => (
-        <TodoItem key={toDo.id} toDo={toDo} toggleToDo={toggleToDo}/>
+        <TodoItem key={toDo.id} toDo={toDo} toggleToDo={toggleToDo} deleteTask={deleteTask} editTask={editTask}/>
       )) 
     }
     </ul>
