@@ -7,7 +7,7 @@ export const GlobalStyle = createGlobalStyle`
     --red: #C3423F;
     --black: #0B0500;
     --grey: #545E56;
-    --pink: #E5D4CE;
+    --white: #F9F9F9;
   }
 
   * {
@@ -18,5 +18,6 @@ export const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
+    background: var(--white);
   }
 `

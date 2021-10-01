@@ -3,11 +3,11 @@ import React from "react";
 // Styles
 import { Wrapper, Content } from "./InfoSection.styles";
 
-const InfoSection = (props) => {
+const InfoSection = ({ tasks }) => {
   return (
     <Wrapper>
       <Content>
-        <p>Te quedan {props.tasks} tareas por terminar</p>
+        <p>You have {tasks} {tasks === 1 ? 'task' : 'tasks'} unfinished</p>
       </Content>
     </Wrapper>
   )
