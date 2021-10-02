@@ -11,7 +11,7 @@ import swal from "sweetalert";
 import Title from "./Title";
 import TodoList from "./TodoList";
 import AddTaskBar from "./AddTaskBar";
-import ClearCompletedButton from "./ClearCompletedButton";
+import ExtraComands from "./ExtraComands";
 import InfoSection from "./InfoSection";
 
 const KEY = 'todoApp.todos'
@@ -49,6 +49,14 @@ const App = () => {
     setToDos(newToDos)
   }
 
+  const showInfo = () => {
+    swal('This is your info!!!')
+  }
+
+  const deleteAll = () => {
+    swal('delete all')
+  }
+
   const handleAddToDo = (value) => {
     if(value === '') return;
 
@@ -68,7 +76,7 @@ const App = () => {
     <Title />
     <TodoList toDos={toDos} toggleToDo={toggleToDo} deleteTask={deleteTask} editTask={editTask}/>
     <AddTaskBar onClick={handleAddToDo} />
-    <ClearCompletedButton onClick={handleClearCompleted}>✖</ClearCompletedButton>
+    <ExtraComands clearCompleted={handleClearCompleted} showInfo={showInfo} deleteAll={deleteAll}></ExtraComands>
     <InfoSection tasks={toDos.filter(todo => !todo.completed).length}/>
     </>
   )

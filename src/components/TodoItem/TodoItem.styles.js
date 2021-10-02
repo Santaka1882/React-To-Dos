@@ -15,25 +15,31 @@ export const ListItem = styled.li`
   }
 
   .buttonContainer {
+    min-width: 120px;
     .completeTask {
       background: ${({completed}) => (
         completed ? 'var(--green)' : 'var(--red)'
       )};
+      cursor: pointer;
     }
     .deleteTask {
       background: var(--black);
+      cursor: pointer;
     }
 
     .editTask {
       background: var(--blue);
+      cursor: pointer;
     }
 
     .applyChanges {
       background: var(--green);
+      cursor: pointer;
     }
 
     .discardChanges {
-      background: var(--black);
+      background: var(--red);
+      cursor: pointer;
     }
   }
 

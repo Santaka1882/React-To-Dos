@@ -10,8 +10,8 @@ import { ListItem } from "./TodoItem.styles";
 // Images
 import checkIcon from '../../images/checkIcon.png'
 import xIcon from '../../images/xIcon.png'
-import cogIcon from '../../images/cogIcon.png'
-import skullIcon from '../../images/skullIcon.png'
+import editIcon from '../../images/editIcon.png'
+import eraserIcon from '../../images/eraserIcon.png'
 
 const TodoItem = ({ toDo, toggleToDo, deleteTask, editTask  }) => {
   const { id, task, completed } = toDo
@@ -66,10 +66,10 @@ const TodoItem = ({ toDo, toggleToDo, deleteTask, editTask  }) => {
             <img src={completed ? checkIcon : xIcon} alt="complete-task-switch" />
           </ListItemButton>
           <ListItemButton className='deleteTask' onClick={handleDeleteClick}>
-            <img src={skullIcon} alt="delete-task-button" />
+            <img src={eraserIcon} alt="delete-task-button" />
           </ListItemButton>
           <ListItemButton className='editTask' onClick={handleEditClick}>
-            <img src={cogIcon} alt="settings-button" />
+            <img src={editIcon} alt="settings-button" />
           </ListItemButton>
         </div>
         </>
@@ -81,7 +81,7 @@ const TodoItem = ({ toDo, toggleToDo, deleteTask, editTask  }) => {
             <img src={checkIcon} alt="Apply-changes" />
           </ListItemButton>
           <ListItemButton className='discardChanges' onClick={discardChanges}>
-            <img src={skullIcon} alt="Discard-changes" />
+            <img src={xIcon} alt="Discard-changes" />
           </ListItemButton>
         </div>
         </>

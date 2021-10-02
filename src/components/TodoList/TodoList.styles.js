@@ -13,8 +13,7 @@ export const Content = styled.div`
 
   ul {
     margin-top: 10px;
-    padding-left: 15px;
-    text-decoration: dashed;
+    padding: 0;
   }
 
   p {

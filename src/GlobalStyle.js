@@ -20,4 +20,14 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     background: var(--white);
   }
+
+  body, textarea:focus, input:focus{
+    outline: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  }
+  
+  p {
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
+  }
 `
