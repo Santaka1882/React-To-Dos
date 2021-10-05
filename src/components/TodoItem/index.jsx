@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import swal from "sweetalert";
 
 // Components
 import ListItemButton from "../ListItemButton";

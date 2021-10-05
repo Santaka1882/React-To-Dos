@@ -27,7 +27,7 @@ const AddTaskBar = ( props ) => {
   return (
     <Wrapper>
       <Content>
-        <input ref={inputRef} type='text' placeholder="New Task"/>
+        <input ref={inputRef} type='text' placeholder="Enter new tasks here!"/>
         <AddTaskButton onClick={sendTask}/>
       </Content>
     </Wrapper>

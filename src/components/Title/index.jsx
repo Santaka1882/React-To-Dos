@@ -3,10 +3,10 @@ import React from "react";
 // Styles
 import { Wrapper, Content } from "./Title.styles";
 
-const Title = () => (
+const Title = ({ name }) => (
   <Wrapper>
     <Content>
-      <h1>React To-dos</h1>
+      <h1>{name}'s To-dos</h1>
     </Content>
   </Wrapper>
 )
