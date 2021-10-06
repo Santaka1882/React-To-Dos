@@ -46,4 +46,15 @@ export const ListItem = styled.li`
   .buttonContainer > div:active {
     transform: scale(0.9);
   }
+
+  @media screen and (min-width: 720px) {
+    .taskContainer{
+      min-width: 500px;
+      p {
+        min-width: 500px;
+        word-wrap: normal;
+        overflow: initial;
+      }
+    }
+  }
 `

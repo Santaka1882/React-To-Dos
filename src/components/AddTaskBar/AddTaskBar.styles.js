@@ -20,4 +20,14 @@ export const Content = styled.div`
     font-family: 'Roboto', sans-serif;
     font-style: italic;
   }
+
+  @media screen and (min-width: 720px) {
+    max-width: 1000px;
+    input {
+      padding-left: 15px;
+      height: 40px;
+      border-radius: 30px 0px 0px 30px;
+      font-size: 1.3rem;
+    }
+  }
 `

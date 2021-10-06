@@ -20,4 +20,16 @@ export const Content = styled.div`
     margin: 5px;
     max-width: 220px;
   }
+
+  @media screen and (min-width: 720px) {
+    margin: 0 auto;
+    max-width: 1500px;
+    h3 {
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 1.3rem;
+    }
+  }
 `

@@ -20,4 +20,14 @@ export const Content = styled.div`
   img {
     width: 40px;
   }
+
+  @media screen and (min-width: 720px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    img {
+      width: 60px;
+    }
+  }
 `

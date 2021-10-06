@@ -141,8 +141,9 @@ const App = () => {
   }
 
   const handleClearCompleted = () => {
+    const completedToDos = toDos.filter(todo => todo.completed)
     const newToDos = toDos.filter(todo => !todo.completed)
-    if(newToDos.length > 0) {
+    if(completedToDos.length > 0) {
       swal({
         title: 'No cheating!',
         text: 'Make sure the tasks are really completed!',
