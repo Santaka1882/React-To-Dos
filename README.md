@@ -10,7 +10,8 @@ To view the website [click here](https://mystifying-franklin-482214.netlify.app/
 
 1. [React.js](https://reactjs.org/) (User interface)
 2. [Styled Components](https://styled-components.com/) (Styling)
-3. [Netlify](https://www.netlify.com/) (Deploy)
+3. [Sweet Alerts](https://sweetalert.js.org/guides/) (Alerts)
+4. [Netlify](https://www.netlify.com/) (Deploy)
 
 ## Features 📃
 - Add new tasks ✔
