@@ -4,7 +4,7 @@
 
 The React to-do app is a simple tool to track tasks.
 
-To view the website [click here](https://mystifying-franklin-482214.netlify.app/).
+To view the website [click here](https://react-to-do-app-1412.netlify.app/).
 
 ## Tecnologies used in the project ⚙
 
